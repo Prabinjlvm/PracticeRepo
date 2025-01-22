@@ -36,7 +36,7 @@ public class TekbayController {
 		return tekbayService.deleteTekbay(id);
 	}
 	
-	@PatchMapping("/updateTekbay")
+	@PatchMapping("/updateTek")
 	public ResponseEntity<Object> updateTekbay(@RequestBody TekbayDto tekbayDto){
 		return tekbayService.updateTekbay(tekbayDto.getId(), tekbayDto);
 	}
