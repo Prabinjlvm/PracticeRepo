@@ -1,0 +1,8 @@
+package com.example.Tekbay.Common;
+
+
+public class TekbayDto {
+        private int id;
+        private String designation;
+        private Double salary;
+}
