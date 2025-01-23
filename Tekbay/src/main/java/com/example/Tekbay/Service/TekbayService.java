@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 
 import com.example.Tekbay.Common.ApiResponse;
+import com.example.Tekbay.Common.JlvmDto;
 import com.example.Tekbay.Common.TekbayDto;
 import com.example.Tekbay.Modal.Tekbay;
 import com.example.Tekbay.Repository.TekbayRepository;
@@ -56,6 +57,12 @@ public class TekbayService {
 			ApiResponse<Tekbay> successupdate = new ApiResponse<>(true,"Data updated successfully",updatedTekbay,HttpStatus.OK.value());
 			return ResponseEntity.ok(successupdate);
 		}
+	}
+	
+	public ResponseEntity<Object> getCombinedData(){
+		List<JlvmDto> combined = tekbayRespository.getCombinedData();
+		ApiResponse<List<JlvmDto>> combinedResponse = new ApiResponse<>(true,"Data retrieved successfully",combined,HttpStatus.OK.value());
+		return ResponseEntity.ok(combinedResponse);
 	}
 }
 
