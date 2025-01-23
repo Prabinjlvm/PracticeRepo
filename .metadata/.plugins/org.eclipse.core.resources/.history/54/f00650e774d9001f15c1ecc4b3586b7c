@@ -1,0 +1,16 @@
+package com.example.Tekbay.Common;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class JlvmResponse {
+     
+	private String emp_name;
+	private String designation;
+	 private String location;
+     private String address;
+}

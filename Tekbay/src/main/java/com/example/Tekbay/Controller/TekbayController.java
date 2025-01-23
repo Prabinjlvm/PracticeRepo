@@ -40,6 +40,11 @@ public class TekbayController {
 	public ResponseEntity<Object> updateTekbay(@RequestBody TekbayDto tekbayDto){
 		return tekbayService.updateTekbay(tekbayDto.getId(), tekbayDto);
 	}
+	
+	@GetMapping("/combinedData")
+	public ResponseEntity<Object> getCombinedData(){
+		return tekbayService.getCombinedData();
+	}
 }
 
 
